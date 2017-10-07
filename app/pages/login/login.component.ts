@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
 
     ngOnInit(): void {
         this.page.actionBarHidden = true;
-        this.page.backgroundImage = "res://bg_login";
+        // this.page.backgroundImage = "res://bg_login";
     }
 
     submit() {
@@ -84,6 +84,13 @@ export class LoginComponent implements OnInit {
         let hintColor = new Color(this.isLoggingIn ? "#ACA6A7" : "#C4AFB4");
         setHintColor({view: emailTextField, color: hintColor});
         setHintColor({view: passwordTextField, color: hintColor});
+    }
+
+    startBackgroundAnimation(background) {
+        background.animate({
+            scale: { x: 1.0, y: 1.0 },
+            duration: 10000
+        });
     }
 
 }

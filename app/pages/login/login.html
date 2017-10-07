@@ -1,6 +1,9 @@
+<GridLayout #background
+            scaleX="1.4"
+            scaleY="1.4"
+            class="background"
+            (loaded)="startBackgroundAnimation(background)"></GridLayout>
 <StackLayout #container class="form">
-    <SearchBar hint="Search hint" [text]="searchPhrase"
-               ></SearchBar>
     <Image src="res://logo_login" stretch="none" horizontalAlignment="center"></Image>
     <TextField #email hint="Email Address" keyboardType="email"
                autocorrect="false" autocapitalizationType="none" [(ngModel)]="user.email"></TextField>
